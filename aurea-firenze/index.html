@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#18251e" />
+  <meta name="description" content="Aurea Firenze: una experiencia gastronómica inspirada en el arte del Renacimiento. Explora nuestra carta, temporadas y experiencias privadas." />
+  <title>Aurea Firenze — El arte de sentarse a la mesa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="walkthrough.css" />
+</head>
+<body>
+  <div class="scroll-meter" id="scrollMeter"></div>
+  <div class="site-notice">Un rincón de Florencia, una mesa para ti <span aria-hidden="true">✦</span> Cocina de autor inspirada en el Renacimiento</div>
+  <header class="header" id="header">
+    <a class="logo" href="#inicio" aria-label="Aurea Firenze, ir al inicio">
+      <span class="logo-mark">A<span class="logo-dot">✦</span></span>
+      <span class="logo-lockup"><strong>AUREA</strong><small>F I R E N Z E</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#inicio">Recorrido</a><a href="#concepto">Nuestra historia</a><a href="#carta">La carta</a><a href="#temporada">De temporada</a><a href="#experiencias">Experiencias</a><a href="#opiniones">Reseñas</a><a href="#ubicacion">Ubicación</a>
+    </nav>
+    <button class="button button-small button-gold header-cta" data-open-reservation>Reservar mesa <span aria-hidden="true">↗</span></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil" hidden>
+    <a href="#inicio">Recorrido</a><a href="#concepto">Nuestra historia</a><a href="#carta">La carta</a><a href="#temporada">De temporada</a><a href="#experiencias">Experiencias</a><a href="#opiniones">Reseñas</a><a href="#ubicacion">Ubicación</a><button data-open-reservation>Reservar mesa ↗</button>
+  </nav>
+
+  <main>
+    <!-- Recorrido ilustrado en perspectiva: una sola cámara avanza mientras el visitante desplaza la página. -->
+    <section class="walkthrough" id="inicio" aria-labelledby="walkTitle">
+      <div class="walk-sticky" id="walkSticky">
+        <canvas id="walkCanvas" class="walk-canvas" aria-hidden="true"></canvas>
+        <div class="walk-tone" aria-hidden="true"></div>
+        <div class="walk-engraving" aria-hidden="true"></div>
+        <div class="walk-topline"><span class="walk-topline-mark">✦</span><span>UN PASEO POR AUREA FIRENZE</span><span id="walkCounter">01 — 06</span></div>
+        <div class="walk-copy" id="walkCopy">
+          <div class="walk-overline"><span class="walk-overline-rule"></span><span id="walkEyebrow">EL UMBRAL · CAPÍTULO I</span></div>
+          <h1 id="walkTitle">Las puertas de<br/><em>otra época.</em></h1>
+          <p id="walkDescription">Cruza el umbral de un lugar donde el arte renacentista y la gastronomía se encuentran en cada detalle.</p>
+          <div class="walk-actions"><a id="walkPrimary" class="button button-gold" href="#concepto">Conoce nuestra historia <span aria-hidden="true">↗</span></a><button class="walk-secondary" data-open-reservation>Reservar una mesa <span aria-hidden="true">↗</span></button></div>
+        </div>
+        <div class="walk-vertical-caption" aria-hidden="true">UN RECORRIDO · SEIS ESCENAS · UNA MISMA HISTORIA</div>
+        <nav class="walk-waypoints" aria-label="Etapas del recorrido">
+          <button class="walk-waypoint active" data-walk-stop="0" aria-label="Ir a la entrada" aria-current="step"><span>01</span><strong>El umbral</strong></button>
+          <button class="walk-waypoint" data-walk-stop="1" aria-label="Ir a la galería"><span>02</span><strong>Galería de arte</strong></button>
+          <button class="walk-waypoint" data-walk-stop="2" aria-label="Ir al comedor"><span>03</span><strong>El comedor</strong></button>
+          <button class="walk-waypoint" data-walk-stop="3" aria-label="Ir a la mesa de temporada"><span>04</span><strong>La temporada</strong></button>
+          <button class="walk-waypoint" data-walk-stop="4" aria-label="Ir al salón privado"><span>05</span><strong>Salón privado</strong></button>
+          <button class="walk-waypoint" data-walk-stop="5" aria-label="Ir a la última sala"><span>06</span><strong>Tu próxima visita</strong></button>
+        </nav>
+        <div class="walk-foot"><span class="walk-scroll-signal"><span class="walk-scroll-arrow">↓</span> DESLIZA PARA CAMINAR</span><div class="walk-progress" role="progressbar" aria-label="Progreso del recorrido" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="walkProgress"><span id="walkProgressFill"></span></div><a href="#concepto">SALTAR EL RECORRIDO ↗</a></div>
+        <div class="walk-credits">RECORRIDO 3D ILUSTRADO · PROTOTIPO INTERACTIVO</div>
+      </div>
+    </section>
+
+    <section class="manifesto paper" id="concepto" aria-labelledby="storyHeading">
+      <div class="section-ornament">❧</div>
+      <div class="wrap story-grid">
+        <div class="story-visual reveal">
+          <div class="story-image photo" data-photo="interior" role="img" aria-label="Comedor elegante con ambiente cálido"><div class="arch-shade"></div></div>
+          <div class="story-image-label">UN ESPACIO PARA QUEDARSE</div>
+          <div class="story-stamp">ARS<br/><span>VIVENDI</span></div>
+        </div>
+        <div class="story-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> CAPÍTULO I — NUESTRA ESENCIA</div>
+          <h2 id="storyHeading">El buen gusto es<br/>una forma de <em>arte.</em></h2>
+          <p class="story-lead">Creemos que una gran comida, como una obra maestra, es capaz de detener el tiempo.</p>
+          <p>Aurea Firenze nace como un homenaje a la creatividad, al encuentro y a los pequeños rituales que convierten una cena en un recuerdo. Técnicas contemporáneas, ingredientes protagonistas y una atmósfera que invita a contemplar.</p>
+          <div class="story-signature"><div class="signature-line"></div><span>LA FILOSOFÍA AUREA</span><span class="signature-flourish">A.</span></div>
+        </div>
+      </div>
+      <div class="manifesto-bottom wrap"><span>LA BELLEZA</span><span>✦</span><span>EL SABOR</span><span>✦</span><span>LA EXPERIENCIA</span></div>
+    </section>
+
+    <section class="chapter-divider" aria-hidden="true"><span>✦</span><div></div><p>UNA MESA, MIL HISTORIAS</p><div></div><span>✦</span></section>
+
+    <section class="menu-section dark" id="carta" aria-labelledby="menuHeading">
+      <div class="wrap">
+        <div class="menu-intro reveal">
+          <div><div class="eyebrow light"><span class="eyebrow-line"></span> CAPÍTULO II — SABORES DE AUTOR</div><h2 id="menuHeading">La <em>carta.</em></h2></div>
+          <p>Una galería de creaciones para descubrir sin prisa. Cada platillo tiene una historia que contar.</p>
+        </div>
+        <div class="menu-shell reveal">
+          <div class="menu-tabs" role="tablist" aria-label="Categorías del menú">
+            <button class="menu-tab active" role="tab" aria-selected="true" data-category="entradas">01. Entradas</button>
+            <button class="menu-tab" role="tab" aria-selected="false" data-category="fuertes">02. Platos fuertes</button>
+            <button class="menu-tab" role="tab" aria-selected="false" data-category="postres">03. Postres</button>
+            <button class="menu-tab" role="tab" aria-selected="false" data-category="bebidas">04. Bebidas</button>
+          </div>
+          <div class="menu-content" id="menuContent" aria-live="polite"></div>
+        </div>
+        <div class="menu-footnote"><span>* Carta y precios de demostración, en MXN. Personalizables con el menú real.</span><button class="text-link light-link" data-open-reservation>Quiero una mesa <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="season-section paper" id="temporada" aria-labelledby="seasonHeading">
+      <div class="wrap">
+        <div class="season-heading reveal"><div class="eyebrow"><span class="eyebrow-line"></span> CAPÍTULO III — EDICIÓN LIMITADA</div><div class="season-heading-main"><h2 id="seasonHeading">El otoño,<br/><em>servido en tres actos.</em></h2><div class="season-medallion"><span>✶</span><small>OTOÑO<br/>2026</small></div></div><p>Ingredientes que siguen el ritmo de la tierra, interpretados con sensibilidad y una pizca de audacia.</p></div>
+        <div class="season-grid">
+          <article class="season-card reveal"><div class="season-photo photo autumn-one" role="img" aria-label="Pasta artesanal de temporada"><span class="season-number">I.</span></div><div class="season-card-info"><div class="mini-label">PRIMER ACTO</div><h3>Oro de la tierra</h3><p>Ravioli de calabaza, mantequilla avellanada y salvia.</p><span class="season-price">$345 MXN</span></div></article>
+          <article class="season-card reveal"><div class="season-photo photo autumn-two" role="img" aria-label="Platillo principal de temporada"><span class="season-number">II.</span></div><div class="season-card-info"><div class="mini-label">SEGUNDO ACTO</div><h3>El bosque secreto</h3><p>Risotto de hongos silvestres, parmesano y aceite de trufa.</p><span class="season-price">$375 MXN</span></div></article>
+          <article class="season-card reveal"><div class="season-photo photo autumn-three" role="img" aria-label="Postre artesanal de temporada"><span class="season-number">III.</span></div><div class="season-card-info"><div class="mini-label">TERCER ACTO</div><h3>Última luz</h3><p>Peras especiadas, mascarpone y caramelo de romero.</p><span class="season-price">$195 MXN</span></div></article>
+        </div>
+        <div class="season-note reveal">« La naturaleza pinta el calendario; nosotros llevamos sus colores al plato. »</div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experiencias" aria-labelledby="experienceHeading">
+      <div class="experience-backdrop photo"></div>
+      <div class="wrap experience-layout">
+        <div class="experience-copy reveal"><div class="eyebrow light"><span class="eyebrow-line"></span> CAPÍTULO IV — CELEBRAR ES UN ARTE</div><h2 id="experienceHeading">Hay momentos<br/>que merecen<br/><em>su propio lienzo.</em></h2><p>Diseñamos experiencias especiales alrededor de lo que de verdad importa: las personas con quienes compartimos la mesa.</p><div class="experience-types"><div><span>01</span><strong>Cenas privadas</strong><small>Una noche solo para los tuyos</small></div><div><span>02</span><strong>Aniversarios y celebraciones</strong><small>Recuerdos a la medida</small></div><div><span>03</span><strong>Eventos corporativos</strong><small>Encuentros con carácter</small></div><div><span>04</span><strong>Experiencias gastronómicas</strong><small>Menús y catas especiales</small></div></div></div>
+        <form class="experience-form reveal" id="eventForm">
+          <div class="form-head"><span class="mini-label">CONCIERGE AUREA</span><h3>Planeemos algo <em>inolvidable.</em></h3><p>Cuéntanos sobre tu ocasión. Prepararemos una solicitud con tus datos.</p></div>
+          <div class="form-grid"><label>Tu nombre<input name="nombre" type="text" placeholder="Nombre completo" required maxlength="100" /></label><label>Correo electrónico<input name="email" type="email" placeholder="correo@ejemplo.com" required maxlength="180" /></label><label>Tipo de evento<select name="tipo" required><option value="" disabled selected>Selecciona una opción</option><option>Cena privada</option><option>Aniversario o celebración</option><option>Evento corporativo</option><option>Experiencia gastronómica</option><option>Otro</option></select></label><label>Fecha deseada<input name="fecha" id="eventDate" type="date" required /></label><label>Número de invitados<input name="invitados" type="number" min="1" max="300" value="10" required /></label><label>Teléfono de contacto<input name="telefono" type="tel" placeholder="+52 ..." maxlength="30" /></label><label class="full-row">Cuéntanos tu idea<textarea name="mensaje" rows="3" maxlength="900" placeholder="¿Cómo imaginas ese día?"></textarea></label></div>
+          <button class="button button-dark" type="submit">Preparar solicitud <span aria-hidden="true">↗</span></button><p class="form-disclaimer">Prototipo: el formulario prepara la solicitud; requiere conectar un correo o sistema de registro para enviarla.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="reviews-section paper" id="opiniones" aria-labelledby="reviewHeading">
+      <div class="wrap review-layout"><div class="review-left reveal"><div class="eyebrow"><span class="eyebrow-line"></span> CAPÍTULO V — ECOS DE LA MESA</div><h2 id="reviewHeading">Lo que queda<br/>después del <em>último bocado.</em></h2><p>Las experiencias memorables merecen ser compartidas.</p><div class="review-controls"><button id="reviewPrev" aria-label="Reseña anterior">←</button><button id="reviewNext" aria-label="Siguiente reseña">→</button></div></div><div class="review-right reveal"><div class="giant-quote">“</div><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><blockquote id="reviewQuote"></blockquote><div class="review-author"><div class="review-avatar" id="reviewAvatar">M</div><div><strong id="reviewName"></strong><small>RESEÑA ILUSTRATIVA · DEMOSTRACIÓN</small></div></div><div class="review-count" id="reviewCount">01 / 03</div></div></div>
+    </section>
+
+    <section class="visit-section dark" id="ubicacion" aria-labelledby="visitHeading">
+      <div class="wrap visit-grid"><div class="visit-content reveal"><div class="eyebrow light"><span class="eyebrow-line"></span> CAPÍTULO VI — VEN A ENCONTRARNOS</div><h2 id="visitHeading">El siguiente<br/><em>encuentro</em><br/>es aquí.</h2><p>Encuentra tu lugar alrededor de nuestra mesa.</p><div class="visit-detail"><span class="detail-symbol">⌖</span><div><strong>Dirección</strong><span id="addressText">Agrega aquí la dirección real del restaurante</span></div></div><div class="visit-detail"><span class="detail-symbol">◷</span><div><strong>Horario</strong><span id="hoursText">Agrega aquí los días y horarios de servicio</span></div></div><div class="visit-detail"><span class="detail-symbol">✉</span><div><strong>Contacto</strong><span id="contactText">Agrega aquí tu teléfono y correo</span></div></div><div class="visit-buttons"><button class="button button-gold" data-open-reservation>Reservar una mesa ↗</button><a class="text-link light-link" id="directionsLink" href="#ubicacion">Cómo llegar ↗</a></div></div><div class="location-art reveal"><div class="map-decoration"><div class="map-grid"></div><div class="map-circle one"></div><div class="map-circle two"></div><svg viewBox="0 0 420 420" role="img" aria-label="Ilustración arquitectónica decorativa de una ciudad renacentista"><g fill="none" stroke="currentColor" stroke-width="1.3" opacity=".74"><path d="M38 330H382M62 330V148h296v182M96 148V103h228v45M123 103V74h174v29M210 74V28M150 330V225a60 60 0 01120 0v105M176 330v-105a34 34 0 0168 0v105"/><path d="M93 188h34v62H93zM293 188h34v62h-34zM177 103h66M115 74H305M137 125h146M98 288h29M293 288h34"/><path d="M60 148l150-78 150 78M210 25c18 0 26 16 26 28h-52c0-12 8-28 26-28z"/><circle cx="210" cy="183" r="19"/><circle cx="210" cy="183" r="10"/><path d="M36 346h348M66 362h288M120 380h180"/></g></svg><div class="map-caption">AUREA FIRENZE <span>✦</span> UN LUGAR POR DESCUBRIR</div></div><div class="map-bottom-text">LA UBICACIÓN SE CONFIGURA CON TU DIRECCIÓN REAL</div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><div class="footer-top"><div><div class="footer-logo">AUREA <em>Firenze</em></div><p>Porque la vida también es una obra de arte.</p></div><div class="footer-social"><div class="mini-label">SÍGUENOS</div><a id="instagramLink" href="#redes">Instagram ↗</a><a id="facebookLink" href="#redes">Facebook ↗</a><a id="tiktokLink" href="#redes">TikTok ↗</a></div><div class="footer-nav"><div class="mini-label">EXPLORA</div><a href="#inicio">Recorrido</a><a href="#concepto">Nuestra historia</a><a href="#carta">La carta</a><a href="#temporada">Temporada</a><a href="#experiencias">Eventos especiales</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> AUREA FIRENZE. SITIO DEMOSTRATIVO.</span><span>HECHO CON PASIÓN Y UN TOQUE DE RENACIMIENTO ✦</span><a href="#inicio">VOLVER ARRIBA ↑</a></div></div></footer>
+
+  <dialog class="reservation-dialog" id="reservationDialog" aria-labelledby="reservationHeading"><button type="button" class="dialog-close" id="closeReservation" aria-label="Cerrar">×</button><div class="reservation-decor">✦ &nbsp; AUREA FIRENZE &nbsp; ✦</div><h2 id="reservationHeading">Tu lugar en<br/><em>nuestra mesa.</em></h2><p>Prepara una solicitud de reservación. La confirmación estará disponible al conectar el sistema del restaurante.</p><form id="reservationForm"><label>Nombre completo<input name="nombre" type="text" required maxlength="100" placeholder="¿A nombre de quién?" /></label><label>Correo electrónico<input name="email" type="email" required maxlength="180" placeholder="correo@ejemplo.com" /></label><div class="reservation-fields"><label>Fecha<input name="fecha" id="reservationDate" type="date" required /></label><label>Horario<select name="hora" required><option value="">Seleccionar</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option></select></label></div><label>Personas<input name="personas" type="number" value="2" min="1" max="30" required /></label><button class="button button-dark" type="submit">Preparar reservación ↗</button><small>Este prototipo no confirma mesas ni guarda datos en un servidor.</small></form></dialog>
+  <dialog class="receipt-dialog" id="receiptDialog" aria-labelledby="receiptHeading"><button type="button" class="dialog-close" id="closeReceipt" aria-label="Cerrar">×</button><div class="reservation-decor">✦ &nbsp; TU SOLICITUD &nbsp; ✦</div><h2 id="receiptHeading">Un detalle<br/><em>por confirmar.</em></h2><p id="receiptIntro"></p><pre id="receiptText"></pre><button class="button button-dark" id="copyRequest">Copiar solicitud ↗</button><p class="form-disclaimer" id="receiptFoot">Esta información todavía no se ha enviado a ningún restaurante.</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+  <script src="walkthrough.js" defer></script>
+</body>
+</html>
